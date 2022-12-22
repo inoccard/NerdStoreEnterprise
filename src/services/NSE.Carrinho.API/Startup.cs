@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NSE.Carrinho.API.Configuration;
+using NSE.Carrinho.API.Data;
 using NSE.WebAPI.Core.Identidade;
 
 namespace NSE.Carrinho.API
@@ -41,8 +43,10 @@ namespace NSE.Carrinho.API
             services.AddMessageBusConfiguration(Configuration);
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, CarrinhoContext context)
         {
+            context.Database.Migrate();
+
             app.UseSwaggerConfiguration();
 
             app.UseApiConfiguration(env);

@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NSE.Identidade.API.Configuration;
+using NSE.Identidade.API.Data;
 
 namespace NSE.Identidade.API
 {
@@ -38,8 +40,10 @@ namespace NSE.Identidade.API
             services.AddMessageBusConfiguration(Configuration);
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext context)
         {
+            context.Database.Migrate();
+
             app.UseSwaggerConfiguration();
             
             app.UseApiConfiguration(env);

@@ -1,10 +1,12 @@
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NSE.Clientes.API.Configuration;
+using NSE.Clientes.API.Data;
 using NSE.WebAPI.Core.Identidade;
 
 namespace NSE.Clientes.API
@@ -44,8 +46,10 @@ namespace NSE.Clientes.API
             services.AddMessageBusConfiguration(Configuration);
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ClientesContext dataContext)
         {
+            dataContext.Database.Migrate();
+
             app.UseSwaggerConfiguration();
 
             app.UseApiConfiguration(env);

@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NSE.Catalogo.API.Configuration;
+using NSE.Catalogo.API.Data;
 using NSE.WebAPI.Core.Identidade;
 
 namespace NSE.Catalogo.API
@@ -41,8 +43,10 @@ namespace NSE.Catalogo.API
             services.RegisterServices();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, CatalogoContext dataContext)
         {
+            dataContext.Database.Migrate();
+
             app.UseSwaggerConfiguration();
 
             app.UseApiConfiguration(env);

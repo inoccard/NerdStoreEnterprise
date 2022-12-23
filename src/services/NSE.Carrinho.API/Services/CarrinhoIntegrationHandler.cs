@@ -10,6 +10,9 @@ using NSE.MessageBus;
 
 namespace NSE.Carrinho.API.Services
 {
+    /// <summary>
+    /// Serve para escutar a fila, está sempre ativo
+    /// </summary>
     public class CarrinhoIntegrationHandler : BackgroundService
     {
         private readonly IMessageBus _bus;

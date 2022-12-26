@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NSE.Bff.Compras.Models;
 using NSE.Bff.Compras.Services;
 using NSE.WebAPI.Core.Controllers;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace NSE.Bff.Compras.Controllers
 {
@@ -120,7 +120,7 @@ namespace NSE.Bff.Compras.Controllers
 
             return true;
         }
-        
+
         private void PopularDadosPedido(CarrinhoDTO carrinho, EnderecoDTO endereco, PedidoDTO pedido)
         {
             pedido.VoucherCodigo = carrinho.Voucher?.Codigo;

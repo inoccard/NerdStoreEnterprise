@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using NSE.Core.Data;
 using NSE.Pedidos.Domain;
+using System.Threading.Tasks;
 
 namespace NSE.Pedidos.Infra.Data.Repository
 {

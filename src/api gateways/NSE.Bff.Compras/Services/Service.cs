@@ -1,9 +1,9 @@
-﻿using System.Net;
+﻿using NSE.Core.Communication;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using NSE.Core.Communication;
 
 namespace NSE.Bff.Compras.Services
 {

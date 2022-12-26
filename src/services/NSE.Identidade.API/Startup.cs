@@ -45,7 +45,7 @@ namespace NSE.Identidade.API
             context.Database.Migrate();
 
             app.UseSwaggerConfiguration();
-            
+
             app.UseApiConfiguration(env);
         }
     }

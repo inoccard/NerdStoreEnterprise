@@ -1,13 +1,13 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NSE.Carrinho.API.Data;
 using NSE.Carrinho.API.Model;
 using NSE.WebAPI.Core.Controllers;
 using NSE.WebAPI.Core.Usuario;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace NSE.Carrinho.API.Controllers
 {
@@ -22,7 +22,7 @@ namespace NSE.Carrinho.API.Controllers
             _user = user;
             _context = context;
         }
-        
+
         [HttpGet("carrinho")]
         public async Task<CarrinhoCliente> ObterCarrinho()
         {

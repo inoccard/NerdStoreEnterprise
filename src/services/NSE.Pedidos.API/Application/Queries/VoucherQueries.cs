@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using NSE.Pedidos.API.Application.DTO;
+﻿using NSE.Pedidos.API.Application.DTO;
 using NSE.Pedidos.Domain;
+using System.Threading.Tasks;
 
 namespace NSE.Pedidos.API.Application.Queries
 {

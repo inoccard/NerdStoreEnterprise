@@ -1,7 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
-using NSE.Core.Messages.Integration;
+﻿using NSE.Core.Messages.Integration;
 using NSE.Pagamentos.API.Models;
+using System;
+using System.Threading.Tasks;
 
 namespace NSE.Pagamentos.API.Services
 {

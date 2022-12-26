@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -14,6 +8,12 @@ using NSE.Identidade.API.Extensions;
 using NSE.Identidade.API.Models;
 using NSE.WebAPI.Core.Identidade;
 using NSE.WebAPI.Core.Usuario;
+using System;
+using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace NSE.Identidade.API.Services
 {
@@ -83,8 +83,8 @@ namespace NSE.Identidade.API.Services
         private string CodificarToken(ClaimsIdentity identityClaims)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var currentIssuer =
-                $"{_aspNetUser.ObterHttpContext().Request.Scheme}://{_aspNetUser.ObterHttpContext().Request.Host}";
+            var request = _aspNetUser.ObterHttpContext().Request;
+            var currentIssuer = $"{request.Scheme}://{request.Host}";
             var key = _jwksService.GetCurrent();
             var token = tokenHandler.CreateToken(new SecurityTokenDescriptor
             {

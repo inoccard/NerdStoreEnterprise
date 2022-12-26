@@ -1,9 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
-using EasyNetQ;
+﻿using EasyNetQ;
 using NSE.Core.Messages.Integration;
 using Polly;
 using RabbitMQ.Client.Exceptions;
+using System;
+using System.Threading.Tasks;
 
 namespace NSE.MessageBus
 {
@@ -77,7 +77,7 @@ namespace NSE.MessageBus
 
         private void TryConnect()
         {
-            if(IsConnected) return;
+            if (IsConnected) return;
 
             var policy = Policy.Handle<EasyNetQException>()
                 .Or<BrokerUnreachableException>()

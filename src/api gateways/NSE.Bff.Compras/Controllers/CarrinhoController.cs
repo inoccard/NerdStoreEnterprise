@@ -1,12 +1,12 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NSE.Bff.Compras.Models;
 using NSE.Bff.Compras.Services;
 using NSE.Bff.Compras.Services.gRPC;
 using NSE.WebAPI.Core.Controllers;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace NSE.Bff.Compras.Controllers
 {
@@ -21,7 +21,7 @@ namespace NSE.Bff.Compras.Controllers
         public CarrinhoController(
             ICarrinhoService carrinhoService,
             ICarrinhoGrpcService carrinhoGrpcService,
-            ICatalogoService catalogoService, 
+            ICatalogoService catalogoService,
             IPedidoService pedidoService)
         {
             _carrinhoService = carrinhoService;

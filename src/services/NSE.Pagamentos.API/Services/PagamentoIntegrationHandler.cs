@@ -1,12 +1,12 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NSE.Core.DomainObjects;
 using NSE.Core.Messages.Integration;
 using NSE.MessageBus;
 using NSE.Pagamentos.API.Models;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace NSE.Pagamentos.API.Services
 {

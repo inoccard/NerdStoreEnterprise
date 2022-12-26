@@ -1,11 +1,11 @@
-﻿using System.Threading.Tasks;
-using Grpc.Core;
+﻿using Grpc.Core;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using NSE.Carrinho.API.Data;
 using NSE.Carrinho.API.Model;
 using NSE.WebAPI.Core.Usuario;
+using System.Threading.Tasks;
 
 namespace NSE.Carrinho.API.Services.gRPC
 {

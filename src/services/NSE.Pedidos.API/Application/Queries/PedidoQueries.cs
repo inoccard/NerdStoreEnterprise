@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Dapper;
+using NSE.Pedidos.API.Application.DTO;
+using NSE.Pedidos.Domain.Pedidos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Dapper;
-using NSE.Pedidos.API.Application.DTO;
-using NSE.Pedidos.Domain.Pedidos;
 
 namespace NSE.Pedidos.API.Application.Queries
 {
@@ -78,7 +78,7 @@ namespace NSE.Pedidos.API.Application.Queries
                 }, splitOn: "PedidoId,PedidoItemId");
 
             // Obtendo dados o lookup
-            return lookup.Values.OrderBy(p=>p.Data).FirstOrDefault();
+            return lookup.Values.OrderBy(p => p.Data).FirstOrDefault();
         }
 
         private PedidoDTO MapearPedido(dynamic result)

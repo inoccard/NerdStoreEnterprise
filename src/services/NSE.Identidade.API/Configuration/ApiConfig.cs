@@ -38,7 +38,7 @@ namespace NSE.Identidade.API.Configuration
             {
                 endpoints.MapControllers();
             });
-            
+
             app.UseJwksDiscovery();
 
             return app;

@@ -4,6 +4,6 @@ namespace NSE.Pagamentos.API.Controllers
 {
     public class PagamentoController : MainController
     {
-        
+
     }
 }

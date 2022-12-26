@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using NSE.Core.Data;
+﻿using NSE.Core.Data;
+using System.Threading.Tasks;
 
 namespace NSE.Pedidos.Domain
 {

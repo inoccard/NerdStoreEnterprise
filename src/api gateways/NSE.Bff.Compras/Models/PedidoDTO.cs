@@ -1,8 +1,8 @@
-﻿using System;
+﻿using NSE.Core.Validation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using NSE.Core.Validation;
 
 namespace NSE.Bff.Compras.Models
 {

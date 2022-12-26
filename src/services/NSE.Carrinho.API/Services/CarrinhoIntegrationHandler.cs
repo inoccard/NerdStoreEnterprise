@@ -1,12 +1,12 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NSE.Carrinho.API.Data;
 using NSE.Core.Messages.Integration;
 using NSE.MessageBus;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace NSE.Carrinho.API.Services
 {

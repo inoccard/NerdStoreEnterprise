@@ -1,11 +1,11 @@
-﻿using System;
-using System.Net;
-using System.Threading.Tasks;
-using Grpc.Core;
+﻿using Grpc.Core;
 using Microsoft.AspNetCore.Http;
 using NSE.WebApp.MVC.Services;
 using Polly.CircuitBreaker;
 using Refit;
+using System;
+using System.Net;
+using System.Threading.Tasks;
 
 namespace NSE.WebApp.MVC.Extensions
 {

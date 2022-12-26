@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using NSE.Pagamentos.API.Models;
+﻿using NSE.Pagamentos.API.Models;
+using System.Threading.Tasks;
 
 namespace NSE.Pagamentos.Facade
 {

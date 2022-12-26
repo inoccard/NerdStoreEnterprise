@@ -1,7 +1,7 @@
-﻿using System.Linq;
-using FluentValidation.Results;
+﻿using FluentValidation.Results;
 using Microsoft.EntityFrameworkCore;
 using NSE.Carrinho.API.Model;
+using System.Linq;
 
 namespace NSE.Carrinho.API.Data
 {

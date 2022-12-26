@@ -1,9 +1,9 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NSE.WebApp.MVC.Models;
 using NSE.WebApp.MVC.Services;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace NSE.WebApp.MVC.Controllers
 {
@@ -22,7 +22,7 @@ namespace NSE.WebApp.MVC.Controllers
         {
             var response = await _clienteService.AdicionarEndereco(endereco);
 
-            if (ResponsePossuiErros(response)) TempData["Erros"] = 
+            if (ResponsePossuiErros(response)) TempData["Erros"] =
                 ModelState.Values.SelectMany(v => v.Errors.Select(e => e.ErrorMessage)).ToList();
 
             return RedirectToAction("EnderecoEntrega", "Pedido");

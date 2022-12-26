@@ -1,7 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using NSE.WebApp.MVC.Services;
+using System;
+using System.Threading.Tasks;
 
 namespace NSE.WebApp.MVC.Controllers
 {

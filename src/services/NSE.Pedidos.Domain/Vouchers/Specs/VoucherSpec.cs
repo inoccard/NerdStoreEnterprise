@@ -1,6 +1,6 @@
-﻿using System;
+﻿using NetDevPack.Specification;
+using System;
 using System.Linq.Expressions;
-using NetDevPack.Specification;
 
 namespace NSE.Pedidos.Domain.Specs
 {

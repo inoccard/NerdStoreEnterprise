@@ -1,7 +1,7 @@
-﻿using System;
-using System.Net.Http;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
 using NSE.Bff.Compras.Extensions;
+using System;
+using System.Net.Http;
 
 namespace NSE.Bff.Compras.Services
 {

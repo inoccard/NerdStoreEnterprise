@@ -1,6 +1,6 @@
-﻿using System;
-using NSE.Core.DomainObjects;
+﻿using NSE.Core.DomainObjects;
 using NSE.Pedidos.Domain.Specs;
+using System;
 
 namespace NSE.Pedidos.Domain
 {

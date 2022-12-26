@@ -1,10 +1,10 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using FluentValidation.Results;
+﻿using FluentValidation.Results;
 using Microsoft.EntityFrameworkCore;
-using NSE.Pagamentos.API.Models;
 using NSE.Core.Data;
 using NSE.Core.Messages;
+using NSE.Pagamentos.API.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace NSE.Pagamentos.API.Data
 {

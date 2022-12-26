@@ -1,7 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
-using NSE.Bff.Compras.Models;
+﻿using NSE.Bff.Compras.Models;
 using NSE.Carrinho.API.Services.gRPC;
+using System;
+using System.Threading.Tasks;
 
 namespace NSE.Bff.Compras.Services.gRPC
 {

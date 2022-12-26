@@ -1,11 +1,11 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NSE.Core.Mediator;
 using NSE.Pedidos.API.Application.Commands;
 using NSE.Pedidos.API.Application.Queries;
 using NSE.WebAPI.Core.Controllers;
 using NSE.WebAPI.Core.Usuario;
+using System.Threading.Tasks;
 
 namespace NSE.Pedidos.API.Controllers
 {

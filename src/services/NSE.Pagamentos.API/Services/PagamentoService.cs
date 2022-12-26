@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using FluentValidation.Results;
+﻿using FluentValidation.Results;
 using NSE.Core.DomainObjects;
 using NSE.Core.Messages.Integration;
 using NSE.Pagamentos.API.Models;
 using NSE.Pagamentos.Facade;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace NSE.Pagamentos.API.Services
 {
@@ -14,7 +14,7 @@ namespace NSE.Pagamentos.API.Services
         private readonly IPagamentoFacade _pagamentoFacade;
         private readonly IPagamentoRepository _pagamentoRepository;
 
-        public PagamentoService(IPagamentoFacade pagamentoFacade, 
+        public PagamentoService(IPagamentoFacade pagamentoFacade,
                                 IPagamentoRepository pagamentoRepository)
         {
             _pagamentoFacade = pagamentoFacade;
@@ -59,7 +59,7 @@ namespace NSE.Pagamentos.API.Services
 
             if (transacaoAutorizada == null) throw new DomainException($"Transação não encontrada para o pedido {pedidoId}");
 
-            var transacao =  await _pagamentoFacade.CapturarPagamento(transacaoAutorizada);
+            var transacao = await _pagamentoFacade.CapturarPagamento(transacaoAutorizada);
 
             if (transacao.Status != StatusTransacao.Pago)
             {

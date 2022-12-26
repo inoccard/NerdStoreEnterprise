@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Net.Http;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace NSE.WebAPI.Core.Extensions
 {
@@ -15,7 +15,7 @@ namespace NSE.WebAPI.Core.Extensions
 
             return builder.ConfigureHttpMessageHandlerBuilder(b =>
             {
-                b.PrimaryHandler = 
+                b.PrimaryHandler =
                     new HttpClientHandler { ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator };
             });
         }

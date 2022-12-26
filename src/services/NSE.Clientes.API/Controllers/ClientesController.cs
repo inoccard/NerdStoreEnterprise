@@ -1,11 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using NSE.Clientes.API.Application.Commands;
 using NSE.Clientes.API.Models;
 using NSE.Core.Mediator;
 using NSE.WebAPI.Core.Controllers;
 using NSE.WebAPI.Core.Usuario;
+using System;
+using System.Threading.Tasks;
 
 namespace NSE.Clientes.API.Controllers
 {

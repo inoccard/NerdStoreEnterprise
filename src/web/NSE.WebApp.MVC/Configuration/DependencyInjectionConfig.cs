@@ -25,7 +25,7 @@ namespace NSE.WebApp.MVC.Configuration
 
             #region HttpServices
 
-            services.AddTransient<HttpClientAuthorizationDelegatingHandler>();
+            //services.AddTransient<HttpClientAuthorizationDelegatingHandler>();
 
             services.AddHttpClient<IAutenticacaoService, AutenticacaoService>()
                 .AddPolicyHandler(PollyExtensions.EsperarTentar())

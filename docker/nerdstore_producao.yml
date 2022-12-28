@@ -4,13 +4,13 @@ services:
 
     rabbitmq:
         image: rabbitmq:3-management
-        container_name: rabbit-nerdstore
+        container_name: rabbit-nerdstore-rabbitmq
         environment:
-            RABBITMQ_DEFAULT_USER: "nerdstore"
-            RABBITMQ_DEFAULT_PASS: "nerdstore"
+            RABBITMQ_DEFAULT_USER: "guest"
+            RABBITMQ_DEFAULT_PASS: "guest"
 
     sql-server:
-        image: desenvolvedorio/nerdstore-sql-server:latest
+        image: inoccard/nerdstore-sql-server:latest
         container_name: nerdstore-sql-server
         build: 
             context: ../sql
@@ -20,8 +20,8 @@ services:
             ACCEPT_EULA: "Y"     
 
     web-mvc:
-        image: desenvolvedorio/nerdstore-web-mvc-ecommerce:latest
-        #container_name: nerdstore-web-mvc-ecommerce
+        image: inoccard/nerdstore-web-mvc-ecommerce:latest
+        container_name: nerdstore-web-mvc-ecommerce
         build:
             context: ../src
             dockerfile: ./web/NSE.WebApp.MVC/Dockerfile
@@ -38,7 +38,7 @@ services:
             - api-bff-compras
 
     api-identidade:
-        image: desenvolvedorio/nerdstore-api-identidade:latest
+        image: inoccard/nerdstore-api-identidade:latest
         container_name: nerdstore-api-identidade    
         build: 
             context: ../src
@@ -56,7 +56,7 @@ services:
             - sql-server
             
     api-carrinho:
-        image: desenvolvedorio/nerdstore-api-carrinho:latest
+        image: inoccard/nerdstore-api-carrinho:latest
         container_name: nerdstore-api-carrinho
         build: 
             context: ../src
@@ -75,7 +75,7 @@ services:
             - sql-server         
 
     api-catalogo:
-        image: desenvolvedorio/nerdstore-api-catalogo:latest
+        image: inoccard/nerdstore-api-catalogo:latest
         container_name: nerdstore-api-catalogo
         build: 
             context: ../src
@@ -93,7 +93,7 @@ services:
             - sql-server
 
     api-cliente:
-        image: desenvolvedorio/nerdstore-api-cliente:latest
+        image: inoccard/nerdstore-api-cliente:latest
         container_name: nerdstore-api-cliente    
         build: 
             context: ../src
@@ -112,7 +112,7 @@ services:
             - sql-server  
 
     api-bff-compras:
-        image: desenvolvedorio/nerdstore-api-bff-compras:latest
+        image: inoccard/nerdstore-api-bff-compras:latest
         container_name: nerdstore-api-bff-compras
         build: 
             context: ../src
@@ -133,7 +133,7 @@ services:
             - api-pedido
             
     api-pagamento:
-        image: desenvolvedorio/nerdstore-api-pagamento:latest
+        image: inoccard/nerdstore-api-pagamento:latest
         container_name: nerdstore-api-pagamento    
         build: 
             context: ../src
@@ -153,7 +153,7 @@ services:
             - sql-server
             
     api-pedido:
-        image: desenvolvedorio/nerdstore-api-pedido:latest
+        image: inoccard/nerdstore-api-pedido:latest
         container_name: nerdstore-api-pedido    
         build: 
             context: ../src
@@ -172,7 +172,7 @@ services:
             - api-identidade                    
 
     nerdstore-server:
-        image: desenvolvedorio/nerdstore-server:latest
+        image: inoccard/nerdstore-server:latest
         container_name: nerdstore-server    
         build: 
             context: ./
